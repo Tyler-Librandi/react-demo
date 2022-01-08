@@ -1,0 +1,23 @@
+.navButtons {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.next {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.previous {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.start {
+    position: fixed;
+    width: 100px;
+    bottom: 20px;
+    margin-left: -50px;
+}

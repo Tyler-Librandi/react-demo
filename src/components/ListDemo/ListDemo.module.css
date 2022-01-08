@@ -1,0 +1,11 @@
+.listDemo {
+  background-color: lightpink;
+  padding: 10%;
+}
+
+.list {
+    text-align: left;
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+}
