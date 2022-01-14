@@ -1,5 +1,32 @@
 .toggleDemo {
-    background-color: lightgreen;
-    padding: 10%;
-  }
-  
+  padding: 10%;
+}
+
+.title {
+  font-size: 34px;
+  color: #c0c0c0;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #c0c0c0;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 30px;
+  background-color: rgb(0, 153, 255);
+  border-radius: 50px;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(90%);
+}
+
+.btn:hover {
+  background-color: rgb(68, 180, 255);
+  transition: 250ms;
+}
