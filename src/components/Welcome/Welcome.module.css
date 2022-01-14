@@ -1,4 +1,13 @@
 .welcome {
-  background-color: lightblue;
   padding: 10%;
+}
+
+.title {
+  font-size: 34px;
+  color: #c0c0c0;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #c0c0c0;
 }

@@ -1,5 +1,5 @@
 .navbar {
-    background-color: slategrey;
+    background-color: #2e2e2e;
     padding: 20px;
     margin: 0;
     font-size: 18px;
@@ -11,6 +11,6 @@
 .navbar * {
     padding: 10px;
     text-decoration: none;
-    color: white;
+    color: #c0c0c0;
     font-weight: bold;
 }

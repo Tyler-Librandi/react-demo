@@ -1,0 +1,64 @@
+.stylesDemo {
+  padding: 5% 10%;
+}  
+
+.title {
+  font-size: 34px;
+  color: #c0c0c0;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #c0c0c0;
+}
+
+.elementBox {
+  margin: 25px 0px 20px 0px;
+}
+
+.element {
+  border: 0px solid black;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #c0c0c0;
+}
+
+.optCol {
+  padding: 0px;
+  margin: 0px;
+}
+
+.optionBox {
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+text-align: center;
+color: #c0c0c0;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  width: 100px;
+  background-color: rgb(0, 153, 255);
+  border-radius: 50px;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(90%);
+}
+
+.btn:hover {
+  background-color: rgb(68, 180, 255);
+  transition: 250ms;
+}
+
+.btn:focus {
+  color: white;
+}

@@ -8,17 +8,17 @@ function ToggleDemoComponent() {
   }
   return (
     <div className={styles.toggleDemo}>
+      <h1 className={styles.title}>Element Visibility</h1>
       {sectionVisibility ? (
         <div>
-            <h1>Element Visibility</h1>
-          <p>
-            This section will demonstrate what I've learned about showing and
-            hiding elements in React
+          <p className={styles.subtitle}>
+            Click the button below to toggle this element's visibility
           </p>
-          <p>Click the button below to toggle this content's visibility</p>
         </div>
       ) : null}
-      <button onClick={toggleSection}>{sectionVisibility == true ? 'Hide' : 'Show'}</button>
+      <button className={styles.btn} onClick={toggleSection}>
+        {sectionVisibility == true ? "Hide" : "Show"}
+      </button>
     </div>
   );
 }
