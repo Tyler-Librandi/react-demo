@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Nav/Navbar";
+import NavbarComponent from "./components/Nav/Navbar";
 import ToggleDemoComponent from "./components/ToggleDemo/ToggleDemo";
 import ListDemoComponent from "./components/ListDemo/ListDemo";
 import StylesDemoComponent from "./components/StylesDemo/StylesDemo";
@@ -10,7 +10,7 @@ import "./app.module.css";
 function App() {
   return (
     <div>
-      <Navbar />
+      <NavbarComponent />
       <Routes>
         <Route path="/react-demo/" element={<WelcomeComponent />} />
         <Route

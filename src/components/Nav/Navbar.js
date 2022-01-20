@@ -1,26 +1,28 @@
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+function NavbarComponent() {
   return (
     <nav className="navbar">
-      <NavLink to="/react-demo/" activeClassName="active">
-        Welcome
-      </NavLink>
-      <NavLink to="/react-demo/element-visibility" activeClassName="active">
-        Element Visibility
-      </NavLink>
-      <NavLink to="/react-demo/list-building" activeClassName="active">
-        List Building
-      </NavLink>
-      <NavLink to="/react-demo/style-manipulation" activeClassName="active">
-        Style Manipulation
-      </NavLink>
-      <NavLink to="/react-demo/chat-with-seb" activeClassName="active">
-        Chat With Seb
-      </NavLink>
+      <ul>
+        <NavLink to="/react-demo/" activeclassname="active">
+          Welcome
+        </NavLink>
+        <NavLink to="/react-demo/element-visibility" activeclassname="active">
+          Element Visibility
+        </NavLink>
+        <NavLink to="/react-demo/list-building" activeclassname="active">
+          List Building
+        </NavLink>
+        <NavLink to="/react-demo/style-manipulation" activeclassname="active">
+          Style Manipulation
+        </NavLink>
+        <NavLink to="/react-demo/chat-with-seb" activeclassname="active">
+          Chat With Seb
+        </NavLink>
+      </ul>
     </nav>
   );
 }
 
-export default Navbar;
+export default NavbarComponent;
