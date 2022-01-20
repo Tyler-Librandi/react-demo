@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import styles from "./StylesDemo.module.css";
 import { Link } from "react-router-dom";
 import Wrapper from "../Wrapper";

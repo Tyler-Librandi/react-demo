@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react/cjs/react.development";
+import { useState, useEffect } from "react";
 import styles from "./ChatDemo.module.css";
 import sebNeutral from "../../images/seb-neutral.svg";
 import sebHappy from "../../images/seb-happy.svg";
