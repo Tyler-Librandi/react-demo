@@ -1,9 +1,7 @@
-import styles from './Wrapper.module.css'
+import styles from "./Wrapper.module.css";
 
 function Wrapper(props) {
-    return <div className={styles.module}>
-        {props.children}
-    </div>
+  return <div className={styles.navBtns}>{props.children}</div>;
 }
 
 export default Wrapper;

@@ -1,6 +1,9 @@
 import styles from "./ListDemo.module.css";
 import { useRef, useState } from "react";
-import { FaWindowClose } from 'react-icons/fa';
+import { FaWindowClose } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Wrapper from "../Wrapper";
+import wrapperStyles from "../Wrapper.module.css";
 
 function ListDemoComponent() {
   const input = useRef();
@@ -27,7 +30,9 @@ function ListDemoComponent() {
       <div className="row">
         <div className="col-6">
           <h1 className={styles.title}>List Building</h1>
-          <p className={styles.subtitle}>Enter something below to add it to the list</p>
+          <p className={styles.subtitle}>
+            Enter something below to add it to the list
+          </p>
           <form onSubmit={addItem}>
             <input
               className={styles.listInput}
@@ -47,8 +52,12 @@ function ListDemoComponent() {
               {list.map((item, id) => (
                 <li className={styles.output} key={id}>
                   {item}
-                  <button className={styles.deleteBtn} key={id} onClick={() => removeThisItem(id)}>
-                  <FaWindowClose />
+                  <button
+                    className={styles.deleteBtn}
+                    key={id}
+                    onClick={() => removeThisItem(id)}
+                  >
+                    <FaWindowClose />
                   </button>
                   <hr />
                 </li>
@@ -57,6 +66,20 @@ function ListDemoComponent() {
           </div>
         </div>
       </div>
+      <Wrapper>
+        <Link
+          to="/react-demo/element-visibility"
+          className={wrapperStyles.previous}
+        >
+          Previous
+        </Link>
+        <Link
+          to="/react-demo/style-manipulation"
+          className={wrapperStyles.next}
+        >
+          Next
+        </Link>
+      </Wrapper>
     </div>
   );
 }

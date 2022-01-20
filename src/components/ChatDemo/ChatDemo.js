@@ -7,6 +7,9 @@ import sebAngry from "../../images/seb-angry.svg";
 import sebConfused from "../../images/seb-confused.svg";
 import SentimentAnalyzerComponent from "./SentimentAnalyzer/SentimentAnalyzer";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+import Wrapper from "../Wrapper";
+import wrapperStyles from "../Wrapper.module.css";
 
 function ChatDemoComponent() {
   const [sebStatus, setSebStatus] = useState("neutral");
@@ -176,6 +179,17 @@ function ChatDemoComponent() {
           </ul>
         </div>
       </div>
+      <Wrapper>
+        <Link
+          to="/react-demo/style-manipulation"
+          className={wrapperStyles.previous}
+        >
+          Previous
+        </Link>
+        <Link to="/react-demo/" className={wrapperStyles.next}>
+          Next
+        </Link>
+      </Wrapper>
     </div>
   );
 }

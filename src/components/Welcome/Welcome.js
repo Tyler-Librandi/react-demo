@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Wrapper from "../Wrapper";
+import wrapperStyles from "../Wrapper.module.css";
 import styles from "./Welcome.module.css";
 
 function WelcomeComponent() {
@@ -5,8 +8,17 @@ function WelcomeComponent() {
     <div className={styles.welcome}>
       <h1 className={styles.title}>Welcome to my interactive React demo</h1>
       <p className={styles.subtitle}>
-        This site will showcase some of the skills I've acquired while learning the basics of React
+        This site will showcase some of the skills I've acquired while learning
+        the basics of React
       </p>
+      <Wrapper>
+        <Link
+          to="/react-demo/element-visibility"
+          className={wrapperStyles.next}
+        >
+          Next
+        </Link>
+      </Wrapper>
     </div>
   );
 }

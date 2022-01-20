@@ -1,5 +1,8 @@
 import { useState } from "react/cjs/react.development";
 import styles from "./StylesDemo.module.css";
+import { Link } from "react-router-dom";
+import Wrapper from "../Wrapper";
+import wrapperStyles from "../Wrapper.module.css";
 
 function StylesDemoComponent() {
   const [colorStyle, setColorStyle] = useState({});
@@ -86,7 +89,10 @@ function StylesDemoComponent() {
             >
               Orange
             </button>
-            <button className={styles.btn} onClick={() => changeColor("#c0c0c0")}>
+            <button
+              className={styles.btn}
+              onClick={() => changeColor("#c0c0c0")}
+            >
               Light Gray
             </button>
           </div>
@@ -200,6 +206,14 @@ function StylesDemoComponent() {
           </div>
         </div>
       </div>
+      <Wrapper>
+        <Link to="/react-demo/list-building" className={wrapperStyles.previous}>
+          Previous
+        </Link>
+        <Link to="/react-demo/chat-with-seb" className={wrapperStyles.next}>
+          Next
+        </Link>
+      </Wrapper>
     </div>
   );
 }

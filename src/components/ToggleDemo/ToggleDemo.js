@@ -1,5 +1,8 @@
 import styles from "./ToggleDemo.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Wrapper from "../Wrapper";
+import wrapperStyles from "../Wrapper.module.css";
 
 function ToggleDemoComponent() {
   const [sectionVisibility, setSectionVisibility] = useState(true);
@@ -19,6 +22,14 @@ function ToggleDemoComponent() {
       <button className={styles.btn} onClick={toggleSection}>
         {sectionVisibility == true ? "Hide" : "Show"}
       </button>
+      <Wrapper>
+        <Link to="/react-demo/" className={wrapperStyles.previous}>
+          Previous
+        </Link>
+        <Link to="/react-demo/list-building" className={wrapperStyles.next}>
+          Next
+        </Link>
+      </Wrapper>
     </div>
   );
 }
