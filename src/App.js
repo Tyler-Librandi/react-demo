@@ -5,9 +5,13 @@ import Navbar from "./components/Nav/Navbar";
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Routes>
+        <Route path="/react-demo" element={<HomePage />} />
+        {/* <Route path="/" element={<HomePage />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} /> */}
       </Routes>
     </div>
   );
