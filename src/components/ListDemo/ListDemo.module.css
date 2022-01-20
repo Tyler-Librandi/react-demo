@@ -63,8 +63,8 @@
 
 .listInput {
   border-radius: 50px;
-  border-color: gold;
-  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgb(0, 153, 255);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .listInput:focus {

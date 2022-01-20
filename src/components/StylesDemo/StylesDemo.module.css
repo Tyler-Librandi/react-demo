@@ -1,6 +1,6 @@
 .stylesDemo {
-  padding: 5% 10%;
-}  
+  padding: 10%;
+}
 
 .title {
   font-size: 34px;
@@ -34,8 +34,8 @@
   padding: 10px;
   margin: 10px;
   background-color: rgba(255, 255, 255, 0.25);
-text-align: center;
-color: #c0c0c0;
+  text-align: center;
+  color: #c0c0c0;
 }
 
 .btn {

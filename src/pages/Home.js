@@ -5,6 +5,7 @@ import ListDemoComponent from "../components/ListDemo/ListDemo";
 import { useState } from "react";
 import Wrapper from "../components/Wrapper";
 import StylesDemoComponent from "../components/StylesDemo/StylesDemo";
+import ChatDemoComponent from "../components/ChatDemo/ChatDemo";
 
 function HomePage() {
   const [currentModule, setCurrentModule] = useState(0);
@@ -13,10 +14,11 @@ function HomePage() {
     <ToggleDemo />,
     <ListDemoComponent />,
     <StylesDemoComponent />,
+    <ChatDemoComponent />,
   ];
 
   function nextDemo() {
-    if (currentModule > (modules.length - 2)) {
+    if (currentModule > modules.length - 2) {
       return null;
     } else {
       setCurrentModule(currentModule + 1);
@@ -36,7 +38,7 @@ function HomePage() {
             Get Started
           </button>
         ) : null}
-        {currentModule > 0 && currentModule < (modules.length - 1) ? (
+        {currentModule > 0 && currentModule < modules.length - 1 ? (
           <button className={styles.next} onClick={nextDemo}>
             Next
           </button>
