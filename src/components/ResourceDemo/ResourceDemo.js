@@ -7,9 +7,9 @@ import { useEffect, useState } from "react";
 function ResourceDemoComponent() {
   //.....Resource States.........................................................................................
   const [sticksCount, setSticksCount] = useState(0);
-  const [lumberCount, setLumberCount] = useState(220);
+  const [lumberCount, setLumberCount] = useState(0);
   const [lumberAvailability, setLumberAvailability] = useState(false);
-  const [stonesCount, setStonesCount] = useState(220);
+  const [stonesCount, setStonesCount] = useState(0);
   const [stonesAvailability, setStonesAvailability] = useState(false);
   const [coalCount, setCoalCount] = useState(0);
   const [coalAvailability, setCoalAvailability] = useState(false);
@@ -29,7 +29,7 @@ function ResourceDemoComponent() {
   const [axeAvailability, setAxeAvailability] = useState(false);
   const [woodPickaxeCount, setWoodPickaxeCount] = useState(0);
   const [woodPickaxeAvailability, setWoodPickaxeAvailability] = useState(false);
-  const [hammerCount, setHammerCount] = useState(220);
+  const [hammerCount, setHammerCount] = useState(0);
   const [hammerAvailability, setHammerAvailability] = useState(false);
   const [stonePickaxeCount, setStonePickaxeCount] = useState(0);
   const [stonePickaxeAvailability, setStonePickaxeAvailability] =
