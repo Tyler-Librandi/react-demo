@@ -2,7 +2,7 @@ import styles from "./ResourceDemo.module.css";
 import { Link } from "react-router-dom";
 import Wrapper from "../Wrapper";
 import wrapperStyles from "../Wrapper.module.css";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 
 function ResourceDemoComponent() {
   //.....Resource States.........................................................................................
