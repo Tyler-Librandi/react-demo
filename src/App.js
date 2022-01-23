@@ -5,6 +5,7 @@ import ListDemoComponent from "./components/ListDemo/ListDemo";
 import StylesDemoComponent from "./components/StylesDemo/StylesDemo";
 import ChatDemoComponent from "./components/ChatDemo/ChatDemo";
 import WelcomeComponent from "./components/Welcome/Welcome";
+import ResourceDemoComponent from "./components/ResourceDemo/ResourceDemo";
 import "./app.module.css";
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
         <Route
           path="/react-demo/chat-with-seb"
           element={<ChatDemoComponent />}
+        />
+        <Route
+          path="/react-demo/resource-rally"
+          element={<ResourceDemoComponent />}
         />
       </Routes>
     </div>

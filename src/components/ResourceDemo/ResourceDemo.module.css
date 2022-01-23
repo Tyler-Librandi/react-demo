@@ -1,0 +1,68 @@
+.resourceDemo {
+  padding: 10%;
+}
+
+.title {
+  font-size: 34px;
+  color: #c0c0c0;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #c0c0c0;
+}
+
+.instructions {
+  color: #c0c0c0;
+}
+
+.separator {
+  color: #c0c0c0;
+}
+
+.sectionTitle {
+  color: #c0c0c0;
+}
+
+.allItems,
+.itemBox {
+  text-align: center;
+}
+
+.itemBox {
+  margin: 40px 0px;
+}
+
+.resources,
+.structures,
+.tools {
+  display: flex;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.userItem {
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  text-transform: capitalize;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.error {
+  color: white;
+}
+
+.available {
+  background-color: rgb(0, 119, 0);
+}
+
+.unavailable {
+  background-color: rgb(119, 0, 0);
+}

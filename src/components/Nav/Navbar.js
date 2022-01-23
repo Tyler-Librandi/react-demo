@@ -20,6 +20,9 @@ function NavbarComponent() {
         <NavLink to="/react-demo/chat-with-seb" activeclassname="active">
           Chat With Seb
         </NavLink>
+        <NavLink to="/react-demo/resource-rally" activeclassname="active">
+          Resource Rally
+        </NavLink>
       </ul>
     </nav>
   );

@@ -186,7 +186,7 @@ function ChatDemoComponent() {
         >
           Previous
         </Link>
-        <Link to="/react-demo/" className={wrapperStyles.next}>
+        <Link to="/react-demo/resource-rally" className={wrapperStyles.next}>
           Next
         </Link>
       </Wrapper>
