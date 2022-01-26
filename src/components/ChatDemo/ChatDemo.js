@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import styles from "./ChatDemo.module.css";
-import sebNeutral from "../../images/seb-neutral.svg";
-import sebHappy from "../../images/seb-happy.svg";
-import sebSad from "../../images/seb-sad.svg";
-import sebAngry from "../../images/seb-angry.svg";
-import sebConfused from "../../images/seb-confused.svg";
+import sebNeutral from "../../images/seb/seb-neutral.svg";
+import sebHappy from "../../images/seb/seb-happy.svg";
+import sebSad from "../../images/seb/seb-sad.svg";
+import sebAngry from "../../images/seb/seb-angry.svg";
+import sebConfused from "../../images/seb/seb-confused.svg";
 import SentimentAnalyzerComponent from "./SentimentAnalyzer/SentimentAnalyzer";
 import { useRef } from "react";
 import { Link } from "react-router-dom";

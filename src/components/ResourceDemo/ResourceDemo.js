@@ -3,10 +3,30 @@ import { Link } from "react-router-dom";
 import Wrapper from "../Wrapper";
 import wrapperStyles from "../Wrapper.module.css";
 import { useEffect, useState } from "react";
+import axeImg from "../../images/resource rally/axe.png";
+import bronzeImg from "../../images/resource rally/bronze.png";
+import bronzePickaxeImg from "../../images/resource rally/bronze pickaxe.png";
+import coalImg from "../../images/resource rally/coal.png";
+import copperImg from "../../images/resource rally/copper.png";
+import copperPickaxeImg from "../../images/resource rally/copper pickaxe.png";
+import hammerImg from "../../images/resource rally/hammer.png";
+import ironImg from "../../images/resource rally/iron.png";
+import lumberImg from "../../images/resource rally/lumber.png";
+import mineImg from "../../images/resource rally/mine.png";
+import quarryImg from "../../images/resource rally/quarry.png";
+import sawmillImg from "../../images/resource rally/sawmill.png";
+import smelterImg from "../../images/resource rally/smelter.png";
+import steelImg from "../../images/resource rally/steel.png";
+import sticksImg from "../../images/resource rally/sticks.png";
+import stonePickaxeImg from "../../images/resource rally/stone pickaxe.png";
+import stonesImg from "../../images/resource rally/stones.png";
+import tinImg from "../../images/resource rally/tin.png";
+import woodPickaxeImg from "../../images/resource rally/wood pickaxe.png";
+import swordImg from "../../images/resource rally/sword.png";
 
 function ResourceDemoComponent() {
   //.....Resource States.........................................................................................
-  const [sticksCount, setSticksCount] = useState(0);
+  const [sticksCount, setSticksCount] = useState(2);
   const [lumberCount, setLumberCount] = useState(0);
   const [lumberAvailability, setLumberAvailability] = useState(false);
   const [stonesCount, setStonesCount] = useState(0);
@@ -21,7 +41,7 @@ function ResourceDemoComponent() {
   const [bronzeAvailability, setBronzeAvailability] = useState(false);
   const [ironCount, setIronCount] = useState(0);
   const [ironAvailability, setIronAvailability] = useState(false);
-  const [steelCount, setSteelCount] = useState(0);
+  const [steelCount, setSteelCount] = useState(7);
   const [steelAvailability, setSteelAvailability] = useState(false);
 
   //.....Tool States.........................................................................................
@@ -51,6 +71,10 @@ function ResourceDemoComponent() {
   const [smelterCount, setSmelterCount] = useState(0);
   const [smelterAvailability, setSmelterAvailability] = useState(false);
 
+  //.....Sword States.........................................................................................
+  const [swordCount, setSwordCount] = useState(0);
+  const [swordAvailability, setSwordAvailability] = useState(false);
+
   //.....Resources.........................................................................................
   const userResources = [
     {
@@ -58,12 +82,14 @@ function ResourceDemoComponent() {
       name: "sticks",
       count: sticksCount,
       availability: true,
+      icon: sticksImg,
     },
     {
       id: 101,
       name: "lumber",
       count: lumberCount,
       availability: lumberAvailability,
+      icon: lumberImg,
       requirements: "axe",
     },
     {
@@ -71,6 +97,7 @@ function ResourceDemoComponent() {
       name: "stones",
       count: stonesCount,
       availability: stonesAvailability,
+      icon: stonesImg,
       requirements: "wood pickaxe",
     },
     {
@@ -78,6 +105,7 @@ function ResourceDemoComponent() {
       name: "coal",
       count: coalCount,
       availability: coalAvailability,
+      icon: coalImg,
       requirements: "stone pickaxe",
     },
     {
@@ -85,6 +113,7 @@ function ResourceDemoComponent() {
       name: "copper",
       count: copperCount,
       availability: copperAvailability,
+      icon: copperImg,
       requirements: "stone pickaxe",
     },
     {
@@ -92,6 +121,7 @@ function ResourceDemoComponent() {
       name: "tin",
       count: tinCount,
       availability: tinAvailability,
+      icon: tinImg,
       requirements: "copper pickaxe",
     },
     {
@@ -99,6 +129,7 @@ function ResourceDemoComponent() {
       name: "bronze",
       count: bronzeCount,
       availability: bronzeAvailability,
+      icon: bronzeImg,
       requirements: "smelter, 1 copper, 1 tin",
     },
     {
@@ -106,6 +137,7 @@ function ResourceDemoComponent() {
       name: "iron",
       count: ironCount,
       availability: ironAvailability,
+      icon: ironImg,
       requirements: "bronze pickaxe",
     },
     {
@@ -113,6 +145,7 @@ function ResourceDemoComponent() {
       name: "steel",
       count: steelCount,
       availability: steelAvailability,
+      icon: steelImg,
       requirements: "smelter, 1 coal, 1 iron",
     },
   ];
@@ -124,6 +157,8 @@ function ResourceDemoComponent() {
       name: "axe",
       count: axeCount,
       availability: axeAvailability,
+      icon: axeImg,
+      description: "collects 1 lumber for each axe crafted",
       requirements: "6 sticks",
     },
     {
@@ -131,6 +166,8 @@ function ResourceDemoComponent() {
       name: "wood pickaxe",
       count: woodPickaxeCount,
       availability: woodPickaxeAvailability,
+      icon: woodPickaxeImg,
+      description: "collects 1 stone for each wood pickaxe crafted",
       requirements: "3 sticks, 2 lumber",
     },
     {
@@ -138,6 +175,8 @@ function ResourceDemoComponent() {
       name: "hammer",
       count: hammerCount,
       availability: hammerAvailability,
+      icon: hammerImg,
+      description: "allows the construction of structures",
       requirements: "1 stick, 1 stone",
     },
     {
@@ -145,6 +184,8 @@ function ResourceDemoComponent() {
       name: "stone pickaxe",
       count: stonePickaxeCount,
       availability: stonePickaxeAvailability,
+      icon: stonePickaxeImg,
+      description: "collects 1 coal or copper for each stone pickaxe crafted",
       requirements: "3 sticks, 2 stones",
     },
     {
@@ -152,6 +193,8 @@ function ResourceDemoComponent() {
       name: "copper pickaxe",
       count: copperPickaxeCount,
       availability: copperPickaxeAvailability,
+      icon: copperPickaxeImg,
+      description: "collects 1 tin for each copper pickaxe crafted",
       requirements: "3 sticks, 2 copper",
     },
     {
@@ -159,6 +202,8 @@ function ResourceDemoComponent() {
       name: "bronze pickaxe",
       count: bronzePickaxeCount,
       availability: bronzePickaxeAvailability,
+      icon: bronzePickaxeImg,
+      description: "collects 1 iron for each bronze pickaxe crafted",
       requirements: "3 sticks, 2 bronze",
     },
   ];
@@ -170,6 +215,8 @@ function ResourceDemoComponent() {
       name: "sawmill",
       count: sawmillCount,
       availability: sawmillAvailability,
+      icon: sawmillImg,
+      description: "collects 5 lumber every second for each sawmill built",
       requirements: "20 lumber, 30 stones, 1 hammer",
     },
     {
@@ -177,6 +224,8 @@ function ResourceDemoComponent() {
       name: "quarry",
       count: quarryCount,
       availability: quarryAvailability,
+      icon: quarryImg,
+      description: "collects 5 stone every second for each quarry built",
       requirements: "40 lumber, 60 stones, 1 hammer",
     },
     {
@@ -184,6 +233,8 @@ function ResourceDemoComponent() {
       name: "mine",
       count: mineCount,
       availability: mineAvailability,
+      icon: mineImg,
+      description: "collects 5 coal every second for each mine built",
       requirements: "80 lumber, 120 stones, 1 hammer",
     },
     {
@@ -191,9 +242,25 @@ function ResourceDemoComponent() {
       name: "smelter",
       count: smelterCount,
       availability: smelterAvailability,
+      icon: smelterImg,
+      description:
+        "allows the gathering of bronze and steel, only 1 smelter is required",
       requirements: "160 lumber, 240 stones, 1 hammer",
     },
   ];
+
+  //.....Sword.........................................................................................
+  const userSword = [
+    {
+      id: 400,
+      name: "sword",
+      count: swordCount,
+      availability: swordAvailability,
+      icon: swordImg,
+      requirements: "2 sticks, 7 steel",
+    },
+  ];
+
   //.....Gather Resources.........................................................................................
   const gather = (name) => {
     if (name == "sticks") {
@@ -305,11 +372,28 @@ function ResourceDemoComponent() {
       }
     }
     if (name == "smelter") {
-      if (lumberCount >= 160 && stonesCount >= 240 && hammerCount >= 1) {
+      if (
+        lumberCount >= 160 &&
+        stonesCount >= 240 &&
+        hammerCount >= 1 &&
+        smelterCount < 1
+      ) {
         setSmelterCount(smelterCount + 1);
         setLumberCount(lumberCount - 160);
         setStonesCount(stonesCount - 240);
         setHammerCount(hammerCount - 1);
+      }
+    }
+  };
+
+  //.....Forge Sword.........................................................................................
+  const forge = (name) => {
+    if (name == "sword") {
+      if (sticksCount >= 2 && steelCount >= 7) {
+        setSwordCount(swordCount + 1);
+        setSticksCount(sticksCount - 2);
+        setSteelCount(steelCount - 7);
+        setSectionVisibility(!sectionVisibility);
       }
     }
   };
@@ -406,45 +490,84 @@ function ResourceDemoComponent() {
     } else {
       setMineAvailability(false);
     }
-    if (lumberCount >= 160 && stonesCount >= 240 && hammerCount >= 1) {
+    if (
+      lumberCount >= 160 &&
+      stonesCount >= 240 &&
+      hammerCount >= 1 &&
+      smelterCount < 1
+    ) {
       setSmelterAvailability(true);
     } else {
       setSmelterAvailability(false);
     }
 
-    //...Structures Functions.........................
+    //...Sword...................................
+    if (sticksCount >= 2 && steelCount >= 7) {
+      setSwordAvailability(true);
+    } else {
+      setSwordAvailability(false);
+    }
+
+    //...Structures Logic............................
     const interval = setInterval(() => {
       if (sawmillCount >= 1) {
-        setLumberCount(lumberCount + sawmillCount);
+        setLumberCount(lumberCount + sawmillCount * 5);
       }
       if (quarryCount >= 1) {
-        setStonesCount(stonesCount + quarryCount);
+        setStonesCount(stonesCount + quarryCount * 5);
       }
       if (mineCount >= 1) {
-        setCoalCount(coalCount + mineCount);
+        setCoalCount(coalCount + mineCount * 5);
       }
     }, 1000);
     return () => clearInterval(interval);
   });
 
+  //.....Winner Modal Visibility.........................................................................................
+  const [sectionVisibility, setSectionVisibility] = useState(false);
+  function toggleSection() {
+    setSectionVisibility(!sectionVisibility);
+  }
+
   return (
     <div className={styles.resourceDemo}>
+      {sectionVisibility ? (
+        <div className={styles.winner}>
+          <div className="row">
+            <div className="col-8"></div>
+            <div className="col-4">
+              <h2 className={styles.winnerTitle}>
+                Congratulations!
+                {userSword.map(({ icon }) => {
+                  return <img src={icon} alt="" className={styles.icon} />;
+                })}
+              </h2>
+              <p className={styles.winnerSubtitle}>
+                You've crafted a steel sword and finished the game but feel free
+                to close this window and keep on clickin'!
+              </p>
+              <button
+                className={[styles.btn, styles.winnerBtn].join(" ")}
+                onClick={toggleSection}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
       <div className="row">
         <div className="col">
           <h1 className={styles.title}>Resource Rally</h1>
           <p className={styles.subtitle}>
             Gather resources, craft tools, and build structures in order to
-            create the golden chalice and win the game!
+            forge the steel sword and win the game!
           </p>
         </div>
-      </div>
-      <hr className={styles.separator} />
-      <div className={[styles.allItems, "row"].join(" ")}>
-        <div className={[styles.itemBox, "col"].join(" ")}>
-          <h4 className={styles.sectionTitle}>Resources:</h4>
-          <div className={styles.resources}>
-            {userResources.map(
-              ({ id, name, count, availability, requirements }) => {
+        <div className="col">
+          <div className={styles.sword}>
+            {userSword.map(
+              ({ id, name, count, availability, icon, requirements }) => {
                 return (
                   <div
                     key={id}
@@ -453,9 +576,44 @@ function ResourceDemoComponent() {
                       styles.userItem,
                     ].join(" ")}
                   >
+                    <img src={icon} alt="" className={styles.icon} />
                     <h5>{name}</h5>
                     <p>{count}</p>
-                    <button onClick={() => gather(name)}>Gather</button>
+                    <button onClick={() => forge(name)} className={styles.btn}>
+                      Forge
+                    </button>
+                    <br />
+                    <br />
+                    <h6>Requirements:</h6>
+                    <p>{requirements}</p>
+                  </div>
+                );
+              }
+            )}
+          </div>
+        </div>
+      </div>
+      <hr className={styles.separator} />
+      <div className={[styles.allItems, "row"].join(" ")}>
+        <div className={[styles.itemBox, "col"].join(" ")}>
+          <h4 className={styles.sectionTitle}>Resources:</h4>
+          <div className={styles.resources}>
+            {userResources.map(
+              ({ id, name, count, availability, icon, requirements }) => {
+                return (
+                  <div
+                    key={id}
+                    className={[
+                      availability ? styles.available : styles.unavailable,
+                      styles.userItem,
+                    ].join(" ")}
+                  >
+                    <img src={icon} alt="" className={styles.icon} />
+                    <h5>{name}</h5>
+                    <p>{count}</p>
+                    <button onClick={() => gather(name)} className={styles.btn}>
+                      Gather
+                    </button>
                     <br />
                     <br />
                     <h6>Requirements:</h6>
@@ -471,7 +629,15 @@ function ResourceDemoComponent() {
             <h4 className={styles.sectionTitle}>Tools:</h4>
             <div className={styles.tools}>
               {userTools.map(
-                ({ id, name, count, availability, requirements }) => {
+                ({
+                  id,
+                  name,
+                  count,
+                  availability,
+                  icon,
+                  description,
+                  requirements,
+                }) => {
                   return (
                     <div
                       key={id}
@@ -480,11 +646,19 @@ function ResourceDemoComponent() {
                         styles.userItem,
                       ].join(" ")}
                     >
+                      <img src={icon} alt="" className={styles.icon} />
                       <p>{name}</p>
                       <p>{count}</p>
-                      <button onClick={() => craft(name)}>Craft</button>
+                      <button
+                        onClick={() => craft(name)}
+                        className={styles.btn}
+                      >
+                        Craft
+                      </button>
                       <br />
                       <br />
+                      <h6>Description:</h6>
+                      <p className={styles.description}>{description}</p>
                       <h6>Requirements:</h6>
                       <p>{requirements}</p>
                     </div>
@@ -499,7 +673,15 @@ function ResourceDemoComponent() {
             <h4 className={styles.sectionTitle}>Structures:</h4>
             <div className={styles.structures}>
               {userStructures.map(
-                ({ id, name, count, availability, requirements }) => {
+                ({
+                  id,
+                  name,
+                  count,
+                  availability,
+                  icon,
+                  description,
+                  requirements,
+                }) => {
                   return (
                     <div
                       key={id}
@@ -508,11 +690,19 @@ function ResourceDemoComponent() {
                         styles.userItem,
                       ].join(" ")}
                     >
+                      <img src={icon} alt="" className={styles.icon} />
                       <p>{name}</p>
                       <p>{count}</p>
-                      <button onClick={() => build(name)}>Build</button>
+                      <button
+                        onClick={() => build(name)}
+                        className={styles.btn}
+                      >
+                        Build
+                      </button>
                       <br />
                       <br />
+                      <h6>Description:</h6>
+                      <p className={styles.description}>{description}</p>
                       <h6>Requirements:</h6>
                       <p>{requirements}</p>
                     </div>

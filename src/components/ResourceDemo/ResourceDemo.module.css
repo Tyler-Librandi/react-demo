@@ -12,16 +12,20 @@
   color: #c0c0c0;
 }
 
-.instructions {
-  color: #c0c0c0;
-}
-
 .separator {
   color: #c0c0c0;
+  margin: 40px 0px;
 }
 
 .sectionTitle {
   color: #c0c0c0;
+  margin: 40px 0px 20px 0px;
+  text-align: center;
+}
+
+.allItems {
+  justify-content: center;
+  display: flex;
 }
 
 .allItems,
@@ -30,7 +34,8 @@
 }
 
 .itemBox {
-  margin: 40px 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .resources,
@@ -38,25 +43,29 @@
 .tools {
   display: flex;
   color: white;
-  display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.sword {
+  display: flex;
+  color: white;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .userItem {
   border: 3px solid white;
   border-radius: 15px;
   padding: 20px;
-  margin: 10px;
+  margin: 25px;
   text-transform: capitalize;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-}
-
-.error {
-  color: white;
+  max-width: 250px;
 }
 
 .available {
@@ -65,4 +74,69 @@
 
 .unavailable {
   background-color: rgb(119, 0, 0);
+}
+
+.icon {
+  max-width: 60px;
+  padding-bottom: 10px;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 15px;
+  background-color: rgb(0, 153, 255);
+  border-radius: 50px;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(90%);
+}
+
+.btn:hover {
+  background-color: rgb(68, 180, 255);
+  transition: 250ms;
+}
+
+.winner {
+  width: 80%;
+  height: 50%;
+  position: fixed;
+  background-color: black;
+  z-index: 10;
+  text-align: right;
+  padding: 5%;
+  border: 3px solid rgb(68, 180, 255);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  background-image: url("../../images/stars.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.winnerTitle {
+  position: relative;
+  top: 50%;
+  color: black;
+  font-size: 54px;
+}
+
+.winnerSubtitle {
+  position: relative;
+  top: 50%;
+  color: black;
+  font-size: 24px;
+}
+
+.winnerBtn {
+  position: relative;
+  top: 50%;
+  color: white;
+  font-size: 24px;
 }
