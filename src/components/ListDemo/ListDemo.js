@@ -28,24 +28,26 @@ function ListDemoComponent() {
   return (
     <div className={styles.listDemo}>
       <div className="row">
-        <div className="col-6">
-          <h1 className={styles.title}>List Building</h1>
-          <p className={styles.subtitle}>
-            Enter something below to add it to the list
-          </p>
-          <form onSubmit={addItem}>
-            <input
-              className={styles.listInput}
-              type="text"
-              ref={input}
-              placeholder="Enter text here"
-            />
-            <button className={styles.btn} type="submit">
-              Add
-            </button>
-          </form>
+        <div className="col-xl-4">
+          <div className={styles.intro}>
+            <h1 className={styles.title}>List Building</h1>
+            <p className={styles.subtitle}>
+              Enter something below to add it to the list
+            </p>
+            <form onSubmit={addItem}>
+              <input
+                className={styles.listInput}
+                type="text"
+                ref={input}
+                placeholder="Enter text here"
+              />
+              <button className={styles.btn} type="submit">
+                Add
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="col-6">
+        <div className="col-xl-8">
           <div className={styles.list}>
             <ul>
               <h2 className={styles.listTitle}>A Few of My Favorite Things</h2>

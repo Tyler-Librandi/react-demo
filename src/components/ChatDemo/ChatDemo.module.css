@@ -1,5 +1,11 @@
 .chatDemo {
-  padding: 10%;
+  padding: 20vh 10vw;
+  margin: 0;
+  position: relative;
+}
+
+.intro {
+  padding-bottom: 50px;
 }
 
 .title {
@@ -14,6 +20,10 @@
 
 .seb {
   text-align: center;
+}
+
+.sebImg {
+  max-width: 500px;
 }
 
 .options {
@@ -40,8 +50,15 @@
   color: white;
   text-align: right;
   height: 500px;
-  padding: 0;
+  padding: 10px;
   overflow: auto;
+  background-color: #c0c0c0;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
 
 .textList li {
@@ -64,4 +81,16 @@
   background-color: rgb(46, 46, 46);
   float: left;
   clear: both;
+}
+
+/* Code Attribution */
+.attribution {
+  position: relative;
+  top: 100px;
+  left: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+  z-index: -1;
 }

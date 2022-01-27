@@ -9,6 +9,7 @@ function StylesDemoComponent() {
   const [bgStyle, setBgStyle] = useState({});
   const [sizeStyle, setSizeStyle] = useState({});
   const [borderSizeStyle, setBorderSizeStyle] = useState({});
+  const [borderActive, setBorderActive] = useState(false);
   const [borderColorStyle, setBorderColorStyle] = useState({});
   const [borderRadiusStyle, setBorderRadiusStyle] = useState({});
 
@@ -27,17 +28,22 @@ function StylesDemoComponent() {
       Click any of the buttons below to change the styling of this sentence!
     </p>
   );
+  function changeSize(newStyle) {
+    setSizeStyle({ fontSize: newStyle });
+  }
   function changeColor(newStyle) {
     setColorStyle({ color: newStyle });
   }
   function changeBGColor(newStyle) {
     setBgStyle({ backgroundColor: newStyle });
   }
-  function changeSize(newStyle) {
-    setSizeStyle({ fontSize: newStyle });
-  }
   function changeBorderSize(newStyle) {
     setBorderSizeStyle({ borderWidth: newStyle });
+    if (newStyle == "0px") {
+      setBorderActive(false);
+    } else {
+      setBorderActive(true);
+    }
   }
   function changeBorderColor(newStyle) {
     setBorderColorStyle({ borderColor: newStyle });
@@ -51,29 +57,51 @@ function StylesDemoComponent() {
       <div className={styles.elementBox}>{elementInit}</div>
 
       <div className={[styles.optRow, "row"].join(" ")}>
-        <div className={[styles.optCol, "col"].join(" ")}>
+        <div className={[styles.optCol, "col-lg"].join(" ")}>
           <div className={styles.optionBox}>
             <h4>Font Size</h4>
-            <button className={styles.btn} onClick={() => changeSize("18px")}>
+            <button
+              className={styles.btn}
+              onClick={() => {
+                changeSize("18px");
+              }}
+            >
               18px
             </button>
-            <button className={styles.btn} onClick={() => changeSize("24px")}>
+            <button
+              className={styles.btn}
+              onClick={() => {
+                changeSize("18px");
+              }}
+            >
               24px
             </button>
-            <button className={styles.btn} onClick={() => changeSize("32px")}>
+            <button
+              className={styles.btn}
+              onClick={() => {
+                changeSize("18px");
+              }}
+            >
               32px
             </button>
-            <button className={styles.btn} onClick={() => changeSize("20px")}>
+            <button
+              className={styles.btn}
+              onClick={() => {
+                changeSize("18px");
+              }}
+            >
               Reset
             </button>
           </div>
         </div>
-        <div className={[styles.optCol, "col"].join(" ")}>
+        <div className={[styles.optCol, "col-lg"].join(" ")}>
           <div className={styles.optionBox}>
             <h4>Font Color</h4>
             <button
               className={styles.btn}
-              onClick={() => changeColor("#8A00FF")}
+              onClick={() => {
+                changeColor("#8A00FF");
+              }}
             >
               Violet
             </button>
@@ -99,7 +127,7 @@ function StylesDemoComponent() {
         </div>
       </div>
       <div className={[styles.optRow, "row"].join(" ")}>
-        <div className={[styles.optCol, "col"].join(" ")}>
+        <div className={[styles.optCol, "col-lg"].join(" ")}>
           <div className={styles.optionBox}>
             <h4>Background Color</h4>
             <button
@@ -128,7 +156,7 @@ function StylesDemoComponent() {
             </button>
           </div>
         </div>
-        <div className={[styles.optCol, "col"].join(" ")}>
+        <div className={[styles.optCol, "col-lg"].join(" ")}>
           <div className={styles.optionBox}>
             <h4>Border Width</h4>
             <button
@@ -158,54 +186,56 @@ function StylesDemoComponent() {
           </div>
         </div>
       </div>
-      <div className={[styles.optRow, "row"].join(" ")}>
-        <div className={[styles.optCol, "col"].join(" ")}>
-          <div className={styles.optionBox}>
-            <h4>Border Color</h4>
-            <button
-              className={styles.btn}
-              onClick={() => changeBorderColor("#0B00FF")}
-            >
-              Blue
-            </button>
-            <button
-              className={styles.btn}
-              onClick={() => changeBorderColor("#0EF167")}
-            >
-              Green
-            </button>
-            <button
-              className={styles.btn}
-              onClick={() => changeBorderColor("#E9161D")}
-            >
-              Red
-            </button>
-            <button
-              className={styles.btn}
-              onClick={() => changeBorderColor("#c0c0c0")}
-            >
-              Light Gray
-            </button>
+      {borderActive == false ? null : (
+        <div className={[styles.optRow, "row"].join(" ")}>
+          <div className={[styles.optCol, "col-lg"].join(" ")}>
+            <div className={styles.optionBox}>
+              <h4>Border Color</h4>
+              <button
+                className={styles.btn}
+                onClick={() => changeBorderColor("#0B00FF")}
+              >
+                Blue
+              </button>
+              <button
+                className={styles.btn}
+                onClick={() => changeBorderColor("#0EF167")}
+              >
+                Green
+              </button>
+              <button
+                className={styles.btn}
+                onClick={() => changeBorderColor("#E9161D")}
+              >
+                Red
+              </button>
+              <button
+                className={styles.btn}
+                onClick={() => changeBorderColor("#c0c0c0")}
+              >
+                Light Gray
+              </button>
+            </div>
+          </div>
+          <div className={[styles.optCol, "col-lg"].join(" ")}>
+            <div className={styles.optionBox}>
+              <h4>Border Radius</h4>
+              <button
+                className={styles.btn}
+                onClick={() => changeBorderRadius("25px")}
+              >
+                Rounded
+              </button>
+              <button
+                className={styles.btn}
+                onClick={() => changeBorderRadius("0px")}
+              >
+                Squared
+              </button>
+            </div>
           </div>
         </div>
-        <div className={[styles.optCol, "col"].join(" ")}>
-          <div className={styles.optionBox}>
-            <h4>Border Radius</h4>
-            <button
-              className={styles.btn}
-              onClick={() => changeBorderRadius("25px")}
-            >
-              Rounded
-            </button>
-            <button
-              className={styles.btn}
-              onClick={() => changeBorderRadius("0px")}
-            >
-              Squared
-            </button>
-          </div>
-        </div>
-      </div>
+      )}
       <Wrapper>
         <Link to="/react-demo/list-building" className={wrapperStyles.previous}>
           Previous

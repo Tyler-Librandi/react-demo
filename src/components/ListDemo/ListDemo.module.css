@@ -1,5 +1,10 @@
 .listDemo {
-  padding: 10%;
+  padding: 20vh 10vw;
+  margin: 0;
+}
+
+.intro {
+  padding-bottom: 50px;
 }
 
 .title {
@@ -65,6 +70,8 @@
   border-radius: 50px;
   border-color: rgb(0, 153, 255);
   background-color: rgba(255, 255, 255, 0.75);
+  min-width: 10vw;
+  max-width: 60vw;
 }
 
 .listInput:focus {

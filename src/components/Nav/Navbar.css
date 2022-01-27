@@ -5,40 +5,41 @@
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: center;
-  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.hamburger {
+  color: #c0c0c0;
+}
+
+.hamburger:hover {
+  color: rgb(0, 153, 255);
+}
+
+.hamburger:focus {
+  box-shadow: none;
+}
+
+.navbar div {
+  margin: 0;
+  padding: 0;
   justify-content: center;
 }
 
-.navbar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul a {
+.navbar div a {
   text-decoration: none;
   font-weight: bold;
   padding: 5px 25px;
   color: #c0c0c0;
 }
 
-.navbar ul a:hover {
+.navbar div a:hover {
   color: rgb(0, 153, 255);
 }
 
-ul a.active {
-  color: rgb(0, 153, 255);
-  border: 3px solid white;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgb(255, 255, 255, 0.05) 100%
-  );
-  border-image: linear-gradient(
-      0deg,
-      rgba(0, 153, 255, 0.2) 50%,
-      rgb(0, 153, 255) 100%
-    )
-    1;
+.navbar div a.active {
+  color: rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(0, 153, 255);
 }
-
-/* hamburger menu ////////////////////////////////////////////// */

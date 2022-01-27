@@ -124,7 +124,7 @@ function ChatDemoComponent() {
   return (
     <div className={styles.chatDemo}>
       <div className="row">
-        <div className="col-8">
+        <div className={[styles.intro, "col-xl-8"].join(" ")}>
           <h1 className={styles.title}>Chat with Seb</h1>
           <p className={styles.subtitle}>
             Interact with Seb and watch his feelings change. (Don't get on his
@@ -135,40 +135,31 @@ function ChatDemoComponent() {
               <img
                 src={sebNeutral}
                 alt="neutral emoji"
-                style={{ width: "500px" }}
+                className={styles.sebImg}
               />
             ) : sebStatus == "happy" ? (
-              <img
-                src={sebHappy}
-                alt="happy emoji"
-                style={{ width: "500px" }}
-              />
+              <img src={sebHappy} alt="happy emoji" className={styles.sebImg} />
             ) : sebStatus == "sad" ? (
-              <img src={sebSad} alt="sad emoji" style={{ width: "500px" }} />
+              <img src={sebSad} alt="sad emoji" className={styles.sebImg} />
             ) : sebStatus == "angry" ? (
-              <img
-                src={sebAngry}
-                alt="angry emoji"
-                style={{ width: "500px" }}
-              />
+              <img src={sebAngry} alt="angry emoji" className={styles.sebImg} />
             ) : sebStatus == "confused" ? (
               <img
                 src={sebConfused}
                 alt="confused emoji"
-                style={{ width: "500px" }}
+                className={styles.sebImg}
               />
             ) : (
               <img
                 src={sebNeutral}
                 alt="neutral emoji"
-                style={{ width: "500px" }}
+                className={styles.sebImg}
               />
             )}
             <SentimentAnalyzerComponent childToParent={childToParent} />
           </div>
         </div>
-
-        <div className={[styles.textListBox, "col-2"].join(" ")}>
+        <div className={[styles.textListBox, "col-xl-4"].join(" ")}>
           <br />
           <h2 className={styles.textListTitle}>Text Log</h2>
           <br />
@@ -190,6 +181,16 @@ function ChatDemoComponent() {
           Next
         </Link>
       </Wrapper>
+      <p className={styles.attribution}>
+        Logic for natural language processing based on{" "}
+        <a
+          target="_blank"
+          href="https://towardsdatascience.com/how-to-use-tensorflow-js-in-react-js-sentimental-analysis-59c538c07256"
+        >
+          code
+        </a>{" "}
+        provided by Manfye Goh
+      </p>
     </div>
   );
 }

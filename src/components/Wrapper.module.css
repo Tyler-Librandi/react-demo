@@ -6,9 +6,9 @@
 .navBtns .next {
   position: fixed;
   width: 100px;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
-  background-color: rgba(187, 187, 187, 0.15);
+  background-color: #3e3f42;
   border: 3px solid rgb(187, 187, 187);
   border-radius: 25px;
   padding: 5px;
@@ -22,7 +22,7 @@
 }
 
 .navBtns .next:hover {
-  background-color: rgba(187, 187, 187, 0.2);
+  background-color: rgb(110, 110, 110);
   border: 3px solid rgb(255, 255, 255);
   border-radius: 25px;
   padding: 5px;
@@ -33,9 +33,9 @@
 .navBtns .previous {
   position: fixed;
   width: 100px;
-  bottom: 20px;
+  bottom: 60px;
   left: 20px;
-  background-color: rgba(187, 187, 187, 0.15);
+  background-color: #3e3f42;
   border: 3px solid rgb(187, 187, 187);
   border-radius: 25px;
   padding: 5px;
@@ -49,7 +49,7 @@
 }
 
 .navBtns .previous:hover {
-  background-color: rgba(187, 187, 187, 0.2);
+  background-color: rgb(110, 110, 110);
   border: 3px solid rgb(255, 255, 255);
   border-radius: 25px;
   padding: 5px;
