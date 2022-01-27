@@ -26,7 +26,7 @@ import swordImg from "../../images/resource rally/sword.png";
 
 function ResourceDemoComponent() {
   //.....Resource States.........................................................................................
-  const [sticksCount, setSticksCount] = useState(2);
+  const [sticksCount, setSticksCount] = useState(0);
   const [lumberCount, setLumberCount] = useState(0);
   const [lumberAvailability, setLumberAvailability] = useState(false);
   const [stonesCount, setStonesCount] = useState(0);
@@ -41,7 +41,7 @@ function ResourceDemoComponent() {
   const [bronzeAvailability, setBronzeAvailability] = useState(false);
   const [ironCount, setIronCount] = useState(0);
   const [ironAvailability, setIronAvailability] = useState(false);
-  const [steelCount, setSteelCount] = useState(7);
+  const [steelCount, setSteelCount] = useState(0);
   const [steelAvailability, setSteelAvailability] = useState(false);
 
   //.....Tool States.........................................................................................
