@@ -534,12 +534,19 @@ function ResourceDemoComponent() {
       {sectionVisibility ? (
         <div className={styles.winner}>
           <div className="row">
-            <div className="col-8"></div>
-            <div className="col-4">
+            <div className="col"></div>
+            <div className="col">
               <h2 className={styles.winnerTitle}>
                 Congratulations!
-                {userSword.map(({ icon }) => {
-                  return <img src={icon} alt="" className={styles.icon} />;
+                {userSword.map(({ id, icon }) => {
+                  return (
+                    <img
+                      key={id}
+                      src={icon}
+                      alt=""
+                      className={styles.winnerIcon}
+                    />
+                  );
                 })}
               </h2>
               <p className={styles.winnerSubtitle}>
