@@ -4,9 +4,9 @@
 }
 
 .navBtns .next {
-  position: fixed;
+  position: absolute;
   width: 100px;
-  bottom: 60px;
+  bottom: 100px;
   right: 20px;
   background-color: #3e3f42;
   border: 3px solid rgb(187, 187, 187);
@@ -31,9 +31,9 @@
 }
 
 .navBtns .previous {
-  position: fixed;
+  position: absolute;
   width: 100px;
-  bottom: 60px;
+  bottom: 100px;
   left: 20px;
   background-color: #3e3f42;
   border: 3px solid rgb(187, 187, 187);

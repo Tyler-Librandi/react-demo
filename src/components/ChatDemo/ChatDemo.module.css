@@ -23,7 +23,7 @@
 }
 
 .sebImg {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .options {
@@ -85,8 +85,7 @@
 
 /* Code Attribution */
 .attribution {
-  position: relative;
-  top: 100px;
+  padding: 40px 0px;
   left: 0;
   color: rgb(255, 255, 255);
   text-align: center;

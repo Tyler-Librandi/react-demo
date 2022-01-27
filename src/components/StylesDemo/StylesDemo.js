@@ -71,7 +71,7 @@ function StylesDemoComponent() {
             <button
               className={styles.btn}
               onClick={() => {
-                changeSize("18px");
+                changeSize("24px");
               }}
             >
               24px
@@ -79,7 +79,7 @@ function StylesDemoComponent() {
             <button
               className={styles.btn}
               onClick={() => {
-                changeSize("18px");
+                changeSize("32px");
               }}
             >
               32px
@@ -87,7 +87,7 @@ function StylesDemoComponent() {
             <button
               className={styles.btn}
               onClick={() => {
-                changeSize("18px");
+                changeSize("20px");
               }}
             >
               Reset

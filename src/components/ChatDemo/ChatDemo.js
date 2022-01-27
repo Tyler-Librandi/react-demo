@@ -170,6 +170,16 @@ function ChatDemoComponent() {
           </ul>
         </div>
       </div>
+      <p className={styles.attribution}>
+        Logic for natural language processing based on{" "}
+        <a
+          target="_blank"
+          href="https://towardsdatascience.com/how-to-use-tensorflow-js-in-react-js-sentimental-analysis-59c538c07256"
+        >
+          code
+        </a>{" "}
+        provided by Manfye Goh
+      </p>
       <Wrapper>
         <Link
           to="/react-demo/style-manipulation"
@@ -181,16 +191,6 @@ function ChatDemoComponent() {
           Next
         </Link>
       </Wrapper>
-      <p className={styles.attribution}>
-        Logic for natural language processing based on{" "}
-        <a
-          target="_blank"
-          href="https://towardsdatascience.com/how-to-use-tensorflow-js-in-react-js-sentimental-analysis-59c538c07256"
-        >
-          code
-        </a>{" "}
-        provided by Manfye Goh
-      </p>
     </div>
   );
 }
